@@ -16,6 +16,12 @@ const requestComplete = function(){
   const jsonString = this.responseText;
   beers = JSON.parse(jsonString);
   populateList(beers);
+  dropdownList(beers);
+  const select = document.getElementById('beer-dropdown');
+  select.addEventListener('change', function(){
+    let drinkInfo = beers[select.value];
+    handleSelectChange(drinkInfo)
+  })
 }
 
 const populateList = function(beers){
@@ -29,6 +35,27 @@ const populateList = function(beers){
     li.appendChild(beerImage);
     ulTag.appendChild(li);
   })
+}
+
+const dropdownList = function(beers){
+    const dropdown = document.getElementById('beer-dropdown');
+    beers.forEach(function(beer){
+      const option = document.createElement('option');
+      option.value = beers.indexOf(beer);
+      option.innerText = beer.name;
+      dropdown.appendChild(option);
+      });
+}
+
+const handleSelectChange = function(beer){
+  const image = document.getElementById('beerPic');
+  image.src = beer.image_url;
+  image.height = 300;
+  const name = document.getElementById('beerName');
+  const description = document.getElementById('description');
+  name.innerText = beer.name;
+  description.innerText = beer.description;
+
 }
 
 
