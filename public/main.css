@@ -1,0 +1,61 @@
+main{
+  width: 300px;
+  margin: 0 auto;
+}
+
+/* input{
+  padding: 10px;
+  border-radius: 5px;
+  width: 400px;
+  font-size: 22px;
+  margin: 10px;
+} */
+
+.Collection{
+  padding: 5px;
+}
+
+h1{
+  font-size: 40px;
+  font-family: monospace;
+  text-align: center;
+}
+ul{
+  list-style:circle;
+}
+
+/* ul li:before {
+  content: '\2014';
+  position: absolute;
+  margin-left: -20px;
+} */
+
+li{
+  margin-bottom:10px;
+  padding: 15px 15px 15px;
+}
+
+.nav{
+  display: flex;
+  flex-direction:column;
+  background-color: #2DB2D7;
+  position: sticky;
+  width: 100%;
+  top:0;
+  z-index:10;
+  color:white;
+  border-bottom: black 3px dotted;
+}
+body{
+  margin:auto;
+}
+
+img{
+  margin-top: 10px;
+  margin-left: 50px;
+}
+/* .gif{
+  background-image: url('https://media.giphy.com/media/g9582DNuQppxC/giphy.gif');
+  height: auto;
+  width: auto;
+} */
